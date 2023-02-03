@@ -1,16 +1,17 @@
+<<<<<<< HEAD
 :root {
-    --Orange: hsl(25, 97%, 53%);
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
     --White: hsl(0, 0%, 100%);
-    --LightGrey: hsl(217, 12%, 63%);
-    --MediumGrey: hsl(216, 12%, 54%);
-    --DarkBlue: hsl(213, 19%, 18%);
-    --VeryDarkBlue: hsl(216, 12%, 8%);
 }
 
 * {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    box-sizing: border-box;
     text-decoration: none;
     color: black;
 }
@@ -18,166 +19,409 @@
 html {
     font-size: 62.5%;
     height: 100%;
-    min-width: 37.5rem;
+    min-width: 30rem;
     max-width: 144rem;
     margin: auto;
 }
 
 body {
     font-size: 1rem;
-    background-color: var(--VeryDarkBlue);
+    background-color: var(--Cream);
     min-height: 100%;
-    font-family: 'Overpass', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 37.5rem;
 }
 
 .main {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
 }
 
-.component {
-    background-color: var(--DarkBlue);
-    width: 32.5rem;
-    height: 36rem;
-    border-radius: 2.5rem;
+.grid-container {
+    width: 35rem;
+    display: grid;
+    grid-template-areas:
+        'section1'
+        'section2';
 }
 
-.rating, .rated {
-    margin: 2.5rem;
+.image {
+    width: 30rem;
+    border-radius: 1rem 1rem 0 0;
 }
 
-.rating .img-star {
-    background-color: #ffffff15;
-    width: 3.5rem;
-    height: 3.5rem;
-    border: none;
-    border-radius: 2.5rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.bgimg {
+    border-radius: 1rem 1rem 0 0;
+    height: 25rem;
+    width: 35rem;
+    background-image: url(images/image-product-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.rated .img-rated {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 1rem;
+.description {
+    padding: 1.75rem;
+    background-color: var(--White);
+    border-radius: 0 0 1rem 1rem;
 }
 
-.rating h2, .rated h2 {
-    color: var(--White);
-    font-weight: 700;
-    font-size: 2rem;
-    margin-top: 2.5rem;
+.tag-description {
+    padding: 0.05rem;
 }
 
-.rated h2 {
-    text-align: center;
-}
-
-.rating p, .rated p {
-    color: var(--White);
-    opacity: 0.6;
-    font-weight: 400;
-    font-size: 1.4rem;
-    line-height: 150%;
-}
-
-.rating p {
-    margin-top: 2.5rem;
-}
-
-.rated p {
-    margin-top: 1rem;
-}
-
-.rated p {
-    text-align: center;
-}
-
-.rated .select {
-    display: flex;
-    justify-content: center;
+h1 {
+    line-height: 100%;
     margin-top: 1.5rem;
+    color: var(--Very-dark-blue);
 }
 
-.rated .select p {
-    color: var(--Orange);
-    background-color: #ffffff15;
-    border-radius: 2.5rem;
-    width: max-content;
-    padding: 0.5rem 1rem;
+p {
+    line-height: 150%;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
 }
 
-.rating-numbers {
+.prices {
     display: flex;
-    justify-content: space-between;
-    margin-top: 2.5rem;
+    flex-direction: row-reverse;
+    justify-content: start;
 }
 
-.rating-numbers span {
-    color: var(--White);
-    padding: 1rem 0 0 0;
-    text-align: center;
-    font-size: 1.35rem;
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 2.5rem;
+.tag-description, p, .normal-price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--Dark-grayish-blue);
 }
 
-span {
-    background-color: #ffffff15;
+.offer-price {
+    color: var(--Dark-cyan);
 }
 
-.active {
-    background-color: var(--MediumGrey);
+.normal-price {
+    text-decoration: line-through;
+    margin-left: 2rem;
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
 }
 
-.rating-button {
-    width: 100%;
-    height: 4rem;
-    background-color: var(--Orange);
-    text-align: center;
+h1, .offer-price {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+button {
+    margin-top: 1rem;
+    width: 30rem;
+    height: 5rem;
+    border-radius: 1rem;
     border: none;
-    border-radius: 2.5rem;
+    background-color: var(--Dark-cyan);
     color: var(--White);
-    margin-top: 2.5rem;
-    font-family: 'Overpass', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+button img {
+    margin-right:0.5rem;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--Very-dark-blue);
 }
 
 .footer {
+    min-width: 35rem;
     position: absolute;
     bottom: 0;
-    left: 0;
     right: 0;
+    left: 0;
     margin: auto;
 }
 
 .attribution {
-    font-size: 1.1rem; 
+    font-size: 11px;
     text-align: center;
-    color: var(--LightGrey);
+    color: var(--Very-dark-blue);
 }
 
 .attribution a {
-    color: hsl(228, 45%, 44%);
+    color: var(--Dark-cyan);
 }
 
-.deactive {
-    display: none;
+.fonts {
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 @media (min-width: 769px) {
-    .rating-numbers span:hover {
-        background-color: var(--Orange);
-        cursor: pointer;
+
+    .grid-container {
+        width: 70rem;
+        display: grid;
+        grid-template-areas:
+            'section1' 'section2'
+            'section1' 'section2';
+        grid-template-columns: 1fr 1fr;
     }
 
-    .rating-button:hover {
-        background-color: var(--White);
-        color: var(--Orange);
-        cursor: pointer;
+    .image {
+        width: 35rem;
+        border-radius: 1rem 0 0 1rem;
+    }
+
+    .bgimg {
+        border-radius: 1rem 0 0 1rem;
+        height: 45rem;
+        width: 35rem;
+        background-image: url(images/image-product-desktop.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .description {
+        width: 32.5rem;
+        border-radius: 0 1rem 1rem 0;
+        padding: 2.5rem 3.5rem 3.25rem;
+    }
+    
+    .tag-description {
+        font-size: 1.25rem;
+        padding: 0.125rem;
+    }
+    
+    p {
+        margin-top: 2.5rem;
+    }
+    
+    .normal-price {
+        margin-top: 1.5rem;
+    }
+    
+    button {
+        width: 25rem;
+        margin-top: 2.25rem;
     }
 }
+=======
+:root {
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+
+    --Very-dark-blue: hsl(212, 21%, 14%);
+    --Dark-grayish-blue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    color: black;
+}
+
+html {
+    font-size: 62.5%;
+    height: 100%;
+    min-width: 30rem;
+    max-width: 144rem;
+    margin: auto;
+}
+
+body {
+    font-size: 1rem;
+    background-color: var(--Cream);
+    min-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 37.5rem;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-container {
+    width: 35rem;
+    display: grid;
+    grid-template-areas:
+        'section1'
+        'section2';
+}
+
+.image {
+    width: 30rem;
+    border-radius: 1rem 1rem 0 0;
+}
+
+.bgimg {
+    border-radius: 1rem 1rem 0 0;
+    height: 25rem;
+    width: 35rem;
+    background-image: url(images/image-product-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.description {
+    padding: 1.75rem;
+    background-color: var(--White);
+    border-radius: 0 0 1rem 1rem;
+}
+
+.tag-description {
+    padding: 0.05rem;
+}
+
+h1 {
+    line-height: 100%;
+    margin-top: 1.5rem;
+    color: var(--Very-dark-blue);
+}
+
+p {
+    line-height: 150%;
+    margin-top: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.prices {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: start;
+}
+
+.tag-description, p, .normal-price {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+    color: var(--Dark-grayish-blue);
+}
+
+.offer-price {
+    color: var(--Dark-cyan);
+}
+
+.normal-price {
+    text-decoration: line-through;
+    margin-left: 2rem;
+    margin-top: 1.25rem;
+    font-size: 1.25rem;
+}
+
+h1, .offer-price {
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+    font-size: 3.5rem;
+}
+
+button {
+    margin-top: 1rem;
+    width: 30rem;
+    height: 5rem;
+    border-radius: 1rem;
+    border: none;
+    background-color: var(--Dark-cyan);
+    color: var(--White);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 1.5rem;
+}
+
+button img {
+    margin-right:0.5rem;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--Very-dark-blue);
+}
+
+.footer {
+    min-width: 35rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    margin: auto;
+}
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--Very-dark-blue);
+}
+
+.attribution a {
+    color: var(--Dark-cyan);
+}
+
+.fonts {
+    font-family: 'Fraunces', serif;
+    font-family: 'Montserrat', sans-serif;
+}
+
+@media (min-width: 769px) {
+
+    .grid-container {
+        width: 70rem;
+        display: grid;
+        grid-template-areas:
+            'section1' 'section2'
+            'section1' 'section2';
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .image {
+        width: 35rem;
+        border-radius: 1rem 0 0 1rem;
+    }
+
+    .bgimg {
+        border-radius: 1rem 0 0 1rem;
+        height: 45rem;
+        width: 35rem;
+        background-image: url(images/image-product-desktop.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
+
+    .description {
+        width: 32.5rem;
+        border-radius: 0 1rem 1rem 0;
+        padding: 2.5rem 3.5rem 3.25rem;
+    }
+    
+    .tag-description {
+        font-size: 1.25rem;
+        padding: 0.125rem;
+    }
+    
+    p {
+        margin-top: 2.5rem;
+    }
+    
+    .normal-price {
+        margin-top: 1.5rem;
+    }
+    
+    button {
+        width: 25rem;
+        margin-top: 2.25rem;
+    }
+}
+>>>>>>> 01976ec1f3cf587f9894c05831b5e95f5d1888d1
