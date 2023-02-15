@@ -1,266 +1,177 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&display=swap');
+
+:root {
+    --Bright-orange: hsl(31, 77%, 52%);
+    --Dark-cyan: hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+
+    --Transparent-white-paragraphs: hsla(0, 0%, 100%, 0.75);
+    --Very-light-gray-background-headings-buttons: hsl(0, 0%, 95%);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    text-decoration: none;
     color: black;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
-
-:root {
-    --very-dark-blue-main-background: hsl(233, 47%, 7%);
-    --dark-desaturated-blue-card-background: hsl(244, 38%, 16%);
-    --soft-violet-accent: hsl(277, 64%, 61%);
-
-    --white-main-heading-stats: hsl(0, 0%, 100%);
-    --slightly-transparent-white-main-paragraph: hsla(0, 0%, 100%, 0.75);
-    --slightly-transparent-white-stat-headings: hsla(0, 0%, 100%, 0.6);
-}
-
-html {
-    height: 100vh;
-}
-
 body {
-    background-color: var(--very-dark-blue-main-background);
-    display: flex;
-    flex-direction: column;
     height: 100%;
+    background-color: var(--Very-light-gray-background-headings-buttons);
+}
+
+.main {
+    display: flex;
     justify-content: center;
     align-items: center;
     min-width: 375px;
-    max-width: 1440px;
-    margin: auto;
+    height: auto;
 }
 
-.grid-layout {
-    min-width: 21.875rem;
+.component {
+    margin: 1rem 0;
+    border-radius: 1rem;
     display: grid;
-    grid-template-areas: 
-        'section1'
-        'section2';
-    grid-template-columns: 1fr;
-    grid-template-rows: auto 1fr;
-}
-
-.section1 {
-    grid-column: 1/2;
-    grid-row: 1/2;
-}
-
-.section2 {
-    grid-column: 1/2;
-    grid-row: 2/3;
-}
-
-.image {
-    width: 21.875rem;
-    height: 100%;
-    border-radius: 1rem 1rem 0 0;
-    position: relative;
-}
-
-.image img {
-    width: 21.875rem;
-    height: 100%;
-    border-radius: 1rem 1rem 0 0;
-}
-
-.img-layer {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(99, 0, 180, 0.5);
-    border-radius: 1rem 1rem 0 0;
-}
-
-.card {
-    width: 21.875rem;
+    grid-template-columns: auto;
     height: fit-content;
-    border-radius: 0 0 1rem 1rem;
-    padding: 1rem 1rem 0 1rem;
-    background-color: var(--dark-desaturated-blue-card-background);
 }
 
-.card-title {
-    color: var(--white-main-heading-stats);
-    font-family: 'Inter', sans-serif;
-    text-align: center;
-    padding: 0 0.75rem;
-    font-size: 1.9rem;
+.fuentes {
+    font-family: 'Lexend Deca', sans-serif;
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+.section1, .section2, .section3 {
+    max-width: 350px;
+    height: 450px;
+    padding: 3.25rem;
+}
+
+.section1 h2, .section2 h2, .section3 h2 {
+    font-family: 'Big Shoulders Display', cursive;
+    font-weight: 700;
+    color: var(--Very-light-gray-background-headings-buttons);
+    margin-top: 2rem;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+}
+
+.section1 p, .section2 p, .section3 p {
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 400;
+    line-height: 150%;
+    color: var(--Transparent-white-paragraphs);
     margin-top: 2rem;
 }
 
-.card-title span {
-    color: var(--soft-violet-accent);
-}
-
-.card-description {
-    font-family: 'Inter', sans-serif;
-    color: var(--slightly-transparent-white-main-paragraph);
-    font-size: 1.1rem;
-    text-align: center;
-    padding: 0 0.75rem;
-    margin-top: 1.25rem;
-    line-height: 175%;
-}
-
-.card-info {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    text-align: center;
-    margin: 2rem 0;
-    height: 12.5rem;
-}
-
-.companies p:first-child, .templates p:first-child, .queries p:first-child {
-    color: var(--white-main-heading-stats);
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 1.3rem;
-}
-
-.templates p:first-child, .queries p:first-child {
-    text-transform: uppercase;
-}
-
-.companies p:last-child, .templates p:last-child, .queries p:last-child {
-    color: var(--slightly-transparent-white-stat-headings);
+.section1 button, .section2 button, .section3 button {
     font-family: 'Lexend Deca', sans-serif;
-    text-transform: uppercase;
     font-weight: 400;
-    font-size: 0.9rem;
-    margin-top: 0.5rem;
-    letter-spacing: 0.07rem;
+    background-color: var(--Very-light-gray-background-headings-buttons);
+    border: none;
+    border-radius: 1.5rem;
+    height: 3rem;
+    width: 10rem;
+    margin-top: 1.5rem;
+}
+
+.section1 button:hover, .section2 button:hover, .section3 button:hover {
+    background-color: transparent;
+    color: var(--Transparent-white-paragraphs);
+    cursor: pointer;
+    border: 0.25rem solid var(--Very-light-gray-background-headings-buttons);
+}
+
+.section1 button {
+    color: var(--Bright-orange);
+}
+
+.section2 button {
+    color: var(--Dark-cyan);
+}
+
+.section3 button {
+    color: var(--Very-dark-cyan);
+}
+
+.section1 {
+    background-color: var(--Bright-orange);
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.section2 {
+    background-color: var(--Dark-cyan);
+}
+
+.section3 {
+    background-color: var(--Very-dark-cyan);
+    border-radius: 0 0 0.5rem 0.5rem;
 }
 
 .footer {
-    margin-top: 1rem;
-    position: relative;
-    bottom: 0;
-    width: 375px;
+    min-width: 350px;
 }
-
-.footer-autor {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin: auto;
-}
-
 .attribution {
+    color: var(--Bright-orange);
     font-size: 11px;
     text-align: center;
-    color: var(--white-main-heading-stats);
 }
 
 .attribution a {
-    color: lightseagreen;
-    transition: 1s;
+    color: var(--Dark-cyan);
 }
 
 .attribution a:hover {
-    color: var(--soft-violet-accent);
-}
-
-.fonts {
-    font-family: 'Inter', sans-serif;
-    font-family: 'Lexend Deca', sans-serif;
+    color: var(--Very-dark-cyan);
 }
 
 @media (min-width: 1024px) {
 
-    .grid-layout {
-        min-width: 42.4375rem;
-        display: grid;
-        grid-template-areas:
-            'section2' 'section1'
-            'section2' 'section1';
-        grid-template-columns: 0.5fr 1fr 1fr 0.5fr;
-        grid-template-rows: 0.5fr 1fr 1fr 0.5fr;
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-width: 375px;
+        height: 100vh;
+    }
+
+    .component {
+        grid-template-columns: auto auto auto;
     }
 
     .section1 {
-        grid-column: 3/4;
-        grid-row: 2/4;
-    }
-
-    .section2 {
-        grid-column: 2/3;
-        grid-row: 2/4;
-    }
-
-    .image {
-        border-radius: 0 0.5rem 0.5rem 0;
-        width: 30rem;
-        position: relative;
-    }
-
-    .image img {
-        border-radius: 0 0.5rem 0.5rem 0;
-        width: 100%;
-    }
-
-    .img-layer {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(99, 0, 180, 0.5);
-        border-radius: 0 0.5rem 0.5rem 0;
-    }
-
-    .card {
         border-radius: 0.5rem 0 0 0.5rem;
-        width: 30rem;
-        height: 25.0275rem;
-        padding: 4rem 4rem 0 4rem;
+    }
+    
+    .section3 {
+        border-radius: 0 0.5rem 0.5rem 0;
     }
 
-    .card-title {
-        font-size: 2rem;
-        text-align: start;
-        padding: 0;
-        margin-top: 0;
+    .section1, .section2, .section3 {
+        height: 500px;
+        padding: 3.25rem 4.5rem 3.25rem 3.25rem;
     }
-
-    .card-description {
-        margin-top: 2rem;
-        margin-right: 0.5rem;
-        line-height: 150%;
-        font-size: 0.9rem;
-        text-align: start;
-        padding: 0;
-    }
-
-    .card-info {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: start;
-        margin-top: 4rem;
-        margin-right: 2.5rem;
-        margin-bottom: 0;
-        height: auto;
-    }
-
-    .companies p:first-child, .templates p:first-child, .queries p:first-child {
-        font-size: 1.5rem;
-    }
-
-    .companies p:last-child, .templates p:last-child, .queries p:last-child {
-        margin-top: 0.5rem;
-        letter-spacing: 0.07rem;
-        font-size: 0.7rem;
+    
+    .section1 button, .section2 button, .section3 button {
+        margin-top: 5rem;
     }
 
     .footer {
         position: absolute;
-        margin-top: 0px;
         bottom: 0;
+        right: 0;
+        left: 0;
+        margin: 0;
+        min-width: 350px;
     }
 
 }
